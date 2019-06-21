@@ -1,0 +1,13 @@
+rect {
+    fill: white;
+}
+
+circle {
+    stroke: #000;
+    stroke-opacity: .5;
+}
+
+.btn {
+    width: 250;
+    height: 200;
+}
