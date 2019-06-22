@@ -3,7 +3,7 @@ var force = null,
     nodes_data = [],
     timing_data = []
 
-var color = d3.scale.category10();
+var color = d3.scale.category20();
 
 const initialize = (svg, data) => {
     nodes_data = data.nodes_data
@@ -16,6 +16,8 @@ const initialize = (svg, data) => {
         .nodes(nodes_data)
         .gravity(0)
         .charge(0)
+
+    console.log(nodes_data)
 
     nodes = svg.selectAll('.node')
         .data(nodes_data)
