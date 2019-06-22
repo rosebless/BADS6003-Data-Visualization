@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column
+}
+
+svg {
+    background-image: url("../img/thai-map.png");
+    background-size: cover
+}
+
+circle {
+    stroke: #000;
+    stroke-opacity: .5;
+}
+
+.btn {
+    width: 250;
+    height: 200;
+}
