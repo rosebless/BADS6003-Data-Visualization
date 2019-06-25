@@ -62,10 +62,13 @@ const provinceLocate = {
   }
 }
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#top-box").append("svg")
   .attr("id", "background-map")
   .attr("width", width)
   .attr("height", height)
+
+d3.select("#left-box")
+  .attr("width", width)
 
 var table = d3.select("#table")
 
@@ -190,25 +193,27 @@ d3.select('#btn-reset').on('click', () => {
   play(0)
 })
 
-d3.select('#btn-previous').on('click', () => {
+d3.select('#btn-previous').on('click', () => onClickPrevious())
+d3.select('#btn-next').on('click', () => onClickNext())
+
+const onClickPrevious = () => {
   d3.select('#icon-play').text('play_arrow')
   if (force) force.stop()
   // clearTimeout(timeOuter)
   clearInterval(player)
   // clearInterval(tempInterval)
-  console.log('btn', time)
   if (time !== 0) play(time - 1)
   else play(timing_label.length - 1)
-})
+}
 
-d3.select('#btn-next').on('click', () => {
+const onClickNext = () => {
   d3.select('#icon-play').text('play_arrow')
   if (force) force.stop()
   // clearTimeout(timeOuter)
   clearInterval(player)
   // clearInterval(tempInterval)
   play(++time)
-})
+}
 
 const play = (props_time = undefined) => {
   if (props_time !== undefined) time = props_time
@@ -222,3 +227,18 @@ const play = (props_time = undefined) => {
     animetion(time)
   }
 }
+
+d3.select("body")
+  .on("keydown", function () { // <-: 37, <-: 39 
+    // svg.append("text")
+    //     .attr("x","5")
+    //     .attr("y","130")
+    //     .style("font-size","20px")
+    // .text("keyCode: " + d3.event.keyCode + " applied to : " + (currentObject===null ? "nothing!" : currentObject.id))  
+    //   .transition().duration(2000)
+    //     .style("fill-opacity",".1")
+    //   .remove();
+    if (d3.event.keyCode === 32) onClickPlay()
+    if (d3.event.keyCode === 37) onClickPrevious() // d3.select('#btn-previous').on("click")()
+    if (d3.event.keyCode === 39) onClickNext()
+  });

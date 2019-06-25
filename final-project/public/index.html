@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tourists in Thailand</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/png" href="src/img/thai-map.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+
+<body>
+    <div id="top-box">
+        <div id="left-box">
+            <div id="button-box">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored "
+                    id="btn-previous" disabled="true">
+                    <i class="material-icons">skip_previous</i>
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                    id="btn-reset" disabled="true">
+                    <i class="material-icons">stop</i>
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored btn"
+                    id="btn-play" disabled="true">
+                    <i class="material-icons" id="icon-play">play_arrow</i>
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                    id="btn-next" disabled="true">
+                    <i class="material-icons">skip_next</i>
+                </button>
+            </div>
+            <text id="timer"></text>
+            <table>
+                <tr id="head">
+                    <th>จังหวัด</th>
+                    <th>จำนวนนักท่องเที่ยว</th>
+                    <th>สัดส่วนนักท่องเที่ยวต่อเดือน (%)</th>
+                    <th></th>
+                </tr>
+                <tr id="row-1">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-2">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-3">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-4">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-5">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-6">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-7">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-8">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-9">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+                <tr id="row-10">
+                    <th class="column-1"><svg id="bg-circle">
+                            <circle cx='6' cy='6' r='5' class="circle-province"></circle>
+                        </svg><text class="txt-province"></text></th>
+                    <th class="column-2"></th>
+                    <th class="column-3"><text class="earning-ratio"></text><i class="material-icons icon-earning"></i>
+                    </th>
+                    <th class="column-4">Rank<i class="material-icons icon-rank"></i><text class="diff-rank"></text>
+                    </th>
+                </tr>
+            </table>
+            <div id="descript">
+                <text class="txt-head">หมายเหตุ</text>
+                <text>&nbsp &nbsp <text class="txt-head">-</text> สัดส่วนนักท่องเที่ยวต่อเดือน (%) คำนวณจาก
+                    ผลต่างของจำนวนนักท่องเที่ยวในเดือนปัจจุบันและจำนวนนักท่องเที่ยวในเดือนก่อนหน้า
+                    หารด้วยจำนวนนักท่องเที่ยวในเดือนก่อนหน้า</text>
+                <text>&nbsp &nbsp <text class="txt-head">-</text> ข้อมูลนี้เป็นส่วนหนึ่งของ Project: Tourists in
+                    Thailand
+                    ของวิชา BADS 6003 Exploratory Data
+                    Analysis
+                    And Data Visualization สถาบันบัณฑิตพัฒนบริหารศาสตร์ (NIDA) </text>
+                <div id="descript-sign">
+                    <text class="txt-head">อธิบายสัญลักษณ์</text>
+                    <div>
+                        <div class="sign-box"><i class="material-icons expand_less">expand_less</i>ผลลัพธ์เพิ่มขึ้น
+                        </div>
+                        <div class="sign-box"><i class="material-icons expand_more">expand_more</i>ผลลัพธ์ลดลง</div>
+                        <div class="sign-box"><i class="material-icons remove">remove</i>ผลลัพธ์เท่าเดิม</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="./src/js/animetion.js"></script>
+<script src="./src/js/main.js"></script>
+
+</html>

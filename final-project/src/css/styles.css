@@ -1,6 +1,6 @@
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff5d6 /* #fff5d2 #fff1d0 */
@@ -17,8 +17,15 @@ circle {
     stroke-opacity: .5;
 }
 
+#top-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
 #left-box {
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +56,7 @@ th {
 }
 
 tr {
-    height: 30px;
+    height: 37px;
 }
 
 .column-1 {
@@ -108,10 +115,14 @@ tr {
 }
 
 #descript {
-    position: absolute;
+    /* width: 80vw; */
     font-size: 10px;
-    left: 65px;
-    bottom: 20px
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    /* margin-left: 10% */
+    margin-left: 15px;
 }
 
 #descript-sign{
@@ -124,6 +135,10 @@ tr {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.txt-head{
+    font-weight: bolder
 }
 
 @font-face {

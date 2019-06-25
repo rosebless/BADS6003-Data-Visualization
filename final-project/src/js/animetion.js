@@ -194,6 +194,11 @@ const showTable = (time) => {
             rowTable.select('.earning-ratio').text(strRatio)
             rankPaint(rowTable, '.icon-rank', row['icon-rank'], row['icon-rank'])
             rankPaint(rowTable, '.diff-rank', row['icon-rank'], row['diffRank'] === 0 ? ' ' : Math.abs(row['diffRank']))
+        } else {
+            rowTable.select('.icon-earning').text("")
+            rowTable.select('.earning-ratio').text("")
+            rowTable.select('.icon-rank').text("")
+            rowTable.select('.diff-rank').text("")
         }
     })
 }
