@@ -88,7 +88,7 @@ const checkTimingData = (checkData = [], num = 0) => {
   }
 }
 
-d3.csv("https://raw.githubusercontent.com/rosebless/BADS6003-Data-Visualization/master/project_web/src/data/data.csv", function (data) {
+d3.csv("../data/data.csv", function (data) { // https://raw.githubusercontent.com/rosebless/BADS6003-Data-Visualization/master/final-project/public/src/data/data.csv
   allData = data
   mapTypeToProvince = Object.keys(data[0]).filter(province => province !== 'month' && province !== 'Bangkok')
   main_num = mapTypeToProvince.length
